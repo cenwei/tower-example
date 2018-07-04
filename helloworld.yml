@@ -2,6 +2,7 @@
 - name: Hello World!
   hosts: all
 
-  tasks:
-  - name: Hello World!
-    shell: echo "Hi! Tower is working."
+tasks:
+  - name: Copy ansible inventory file to client
+    copy: src=/etc/ansible/hosts dest=/etc/ansible/hosts
+            owner=root group=root mode=0644
